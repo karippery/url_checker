@@ -16,10 +16,7 @@ import { getUrlStatus } from '../utils/statusUtils';
 export const UrlChecker: React.FC = () => {
   const { url, isLoading, result, handleUrlChange } = useUrlValidation();
 
-  const inputValidation = React.useMemo(() => 
-    validateUrlFormat(url), 
-    [url]
-  );
+  const inputValidation = validateUrlFormat(url);
 
 
   return (
